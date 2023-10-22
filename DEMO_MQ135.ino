@@ -19,14 +19,11 @@
 #define buzzer D0
 #define ledRed D0
 #define ledBlue D3 
-
 #define BLYNK_TEMPLATE_ID "TMPL6FeyJTtJP"
 #define BLYNK_TEMPLATE_NAME "Sistem Monitoring"
 #define BLYNK_AUTH_TOKEN "_NJuO08qaYITQkbWdOloKjnVaPXYmK0l"
 
-
 WiFiClient client;
- 
 long myChannelNumber = 2210106;
 const char myWriteAPIKey[] = "YRBO23Q5GPOKJWRO";
 
@@ -101,8 +98,6 @@ void setup() {
 
   lcd.createChar(0, smiley);
   lcd.createChar(1, sad);
-
-
   //Set math model to calculate the PPM concentration and the value of constants
   MQ135.setRegressionMethod(1); //_PPM =  a*ratio^b
   MQ135.init(); 
